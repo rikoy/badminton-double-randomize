@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "wbc-randomizer",
     "public": "public",
     "ignore": [
       "firebase.json",
