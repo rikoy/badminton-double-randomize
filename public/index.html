@@ -79,29 +79,8 @@
             </div>
         </div>
     </div>
-
-    <script src="script.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/service-worker.js').then((registration) => {
-                    registration.onupdatefound = () => {
-                        const installingWorker = registration.installing;
-                        installingWorker.onstatechange = () => {
-                            if (installingWorker.state === 'installed') {
-                                if (navigator.serviceWorker.controller) {
-                                    // New update available
-                                    if (confirm("New version available. Reload to update?")) {
-                                        window.location.reload();
-                                    }
-                                }
-                            }
-                        };
-                    };
-                }).catch((error) => {
-                    console.error('Error during service worker registration:', error);
-                });
-            }
-    </script>
+    <script src=script.js></script>
+    <script>"serviceWorker" in navigator && navigator.serviceWorker.register("/service-worker.js").then((e => { console.log("ServiceWorker registration successful with scope: ", e.scope) })).catch((e => { console.log("ServiceWorker registration failed: ", e) }))</script>
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
@@ -112,7 +91,7 @@
         // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
-            apiKey: "your_api_key",
+            apiKey: "AIzaSyDyBvgclcKTalZykv2VkyF2Oh6k4xCWzm8",
             authDomain: "wbc-randomizer.firebaseapp.com",
             projectId: "wbc-randomizer",
             storageBucket: "wbc-randomizer.appspot.com",
